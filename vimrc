@@ -21,6 +21,7 @@ nmap <silent> <leader>p :tabp<CR>
 
 imap <C-S> <ESC>:w<CR>a
 nmap <C-S> :w<CR>
+nmap <C-T> <leader>t
 
 filetype plugin indent on
 
