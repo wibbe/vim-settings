@@ -1,0 +1,3 @@
+[submodule "vim/bundle/moonscript"]
+	path = vim/bundle/moonscript
+	url = git://github.com/leafo/moonscript-vim.git
