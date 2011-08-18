@@ -22,6 +22,8 @@ nmap <silent> <leader>p :tabp<CR>
 imap <C-S> <ESC>:w<CR>a
 nmap <C-S> :w<CR>
 nmap <C-T> <leader>t
+"nnoremap <tab> %
+"vnoremap <tab> %
 
 filetype plugin indent on
 
@@ -37,8 +39,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set autoindent          " use autoindenting
 set copyindent          " copy the previous indetation on autoindenting
 set showmatch           " show matching parenthesis
-set ignorecase          " ignore case when searching
-set smartcase           " ignore case if search pattern is all lowercase, case-sesitive otherwise
+set noignorecase        " use case-sesitive searching
 set hlsearch            " highlight search terms
 set incsearch           " show matches as you type
 set shiftwidth=2        " number of spaces to use for autoindenting
@@ -69,8 +70,8 @@ set wildmode=longest,list " completion mode for matches
 set guifont=Inconsolata:h13
 
 if &t_Co >= 256 || has("gui_running")
-  "colorscheme mustang
-  colorscheme desert
+  colorscheme mustang
+  "colorscheme desert
 endif
 
 if &t_Co > 2 || has("gui_running")
