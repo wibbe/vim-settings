@@ -22,8 +22,8 @@ nmap <silent> <leader>p :tabp<CR>
 imap <C-S> <ESC>:w<CR>a
 nmap <C-S> :w<CR>
 nmap <C-T> <leader>t
-"nnoremap <tab> %
-"vnoremap <tab> %
+nnoremap <tab> %
+vnoremap <tab> %
 
 filetype plugin indent on
 
@@ -67,7 +67,7 @@ set wildmode=longest,list " completion mode for matches
 
 
 " Change look and feel of the editor
-set guifont=Inconsolata:h13
+set guifont=Inconsolata:h14
 
 if &t_Co >= 256 || has("gui_running")
   colorscheme mustang
