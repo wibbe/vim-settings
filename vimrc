@@ -32,6 +32,7 @@ filetype plugin indent on
 set hidden
 
 set nowrap              " don't wrap lines
+set textwidth=0         " don't wrap lines
 set tabstop=2           " a tab is 2 spaces
 set softtabstop=2
 set expandtab           " expand tabs to spaces
