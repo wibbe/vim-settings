@@ -67,7 +67,8 @@ set wildmode=longest,list " completion mode for matches
 
 
 " Change look and feel of the editor
-set guifont=Inconsolata:h14
+"set guifont=Inconsolata:h14
+set guifont=Monospace
 
 if &t_Co >= 256 || has("gui_running")
   colorscheme mustang
@@ -88,4 +89,12 @@ let vimclojure#HighlightBuiltins=1
 let vimclojure#HighlightContrib=1
 let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
+
+" Cap file syntax support
+au BufRead *.cap set filetype=cpp
+au BufRead *.cap syn keyword cType interface property event interface implements implementation namespace requires data readonly handle external
+
+" Support for cg and Ogre material/program files
+au BufRead,BufNewFile *.cg set filetype=cg
+au BufRead,BufNewFile *.material,*.program set filetype=cg
 
