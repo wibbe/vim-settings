@@ -1,3 +1,6 @@
 [submodule "vim/bundle/moonscript"]
 	path = vim/bundle/moonscript
 	url = git://github.com/leafo/moonscript-vim.git
+[submodule "vim/bundle/qml"]
+	path = vim/bundle/qml
+	url = https://github.com/peterhoeg/vim-qml.git
