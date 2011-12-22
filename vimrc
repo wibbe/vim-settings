@@ -63,17 +63,19 @@ set nobackup            " No backups, we use modern ways of tracking our changes
 set noswapfile
 set history=1000        " remember more commands and search history
 set undolevels=1000     " use many undo levels
-set cursorline          " highlight the current line
+"set cursorline          " highlight the current line
 set wildmode=longest,list " completion mode for matches
 
+" Spell checking
+setlocal spell spelllang=en_us 
 
 " Change look and feel of the editor
-"set guifont=Inconsolata:h14
-set guifont=Monospace
+set guifont=Inconsolata\ 12
+"set guifont=Monospace
 
 if &t_Co >= 256 || has("gui_running")
-  colorscheme mustang
-  "colorscheme desert
+  "colorscheme mustang
+  colorscheme desert
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -92,10 +94,11 @@ let vimclojure#DynamicHighlighting=1
 let vimclojure#ParenRainbow=1
 
 " Cap file syntax support
-au BufRead *.cap set filetype=cpp
-au BufRead *.cap syn keyword cType interface property event interface implements implementation namespace requires data readonly handle external
+au BufNewFile,BufRead *.cap set filetype=cpp
+au BufNewFile,BufRead *.cap syn keyword cType interface property event interface implements implementation namespace requires data readonly handle external
 
 " Support for cg and Ogre material/program files
 au BufRead,BufNewFile *.cg set filetype=cg
 au BufRead,BufNewFile *.material,*.program set filetype=cg
+au BufNewFile,BufRead *.qml set filetype=qml
 
